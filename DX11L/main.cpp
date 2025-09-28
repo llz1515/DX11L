@@ -1,7 +1,13 @@
 #include "SystemClass.h"
+#include <iostream>
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pScmdline, int iCmdshow)
 {
+	// 创建调试用控制台窗口
+	AllocConsole();
+	FILE* stream;
+	freopen_s(&stream, "CONOUT$", "w", stdout);
+
 	SystemClass* System;
 	bool result;
 	// Create the system object.
